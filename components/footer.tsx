@@ -11,7 +11,7 @@ export default function Footer() {
             <h3 className="text-xl font-bold mb-4">The RockShield</h3>
             <p className="text-gray-400 mb-4">Your Reliable Gabion, Rock Fall Protection & Painting Partner.</p>
             <div className="flex space-x-4">
-              <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+              <Link href="https://www.facebook.com/profile.php?id=61574480562946&mibextid=ZbWKwL" className="text-gray-400 hover:text-white transition-colors">
                 <Facebook size={20} />
               </Link>
               <Link href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -64,27 +64,37 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Gabion Retaining Walls
+                  Gabion Retaining Wall
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Rock Fall Protection
+                  Rock Fall Netting
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Painting Services
+                  ChainLink Fencing
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Site & Soil Surveys
+                  Concrete Panel Fencing
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Pre-Construction Design
+                  Concertina Coil
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                  RCC Retaining Wall
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-gray-400 hover:text-white transition-colors">
+                  Pitching Geo Mattresses (Stone Pitching)
                 </Link>
               </li>
             </ul>

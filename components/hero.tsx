@@ -89,7 +89,7 @@ export default function Hero() {
               animate="visible"
               className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight font-heading"
             >
-              <span className="text-emerald-400">The RockShield</span> - Your Reliable Gabion, Rock Fall Protection & Painting Partner
+              <span className="text-emerald-400">The RockShield</span> – Your Trusted Partner for Durable Gabion Solutions and Reliable Rock Fall Protection Systems.
             </motion.h1>
             
             <motion.p 
@@ -98,7 +98,7 @@ export default function Hero() {
               animate="visible"
               className="text-xl md:text-2xl text-white/90 mb-10 leading-relaxed"
             >
-              We'll get the job done with quality installations and civil services!
+              We'll get the job done with quality installations and best services!
             </motion.p>
             
             <motion.div

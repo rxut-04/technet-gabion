@@ -35,32 +35,32 @@ const testimonials = [
     id: 1,
     content:
       "The RockShield delivered exceptional quality on our hillside protection project. Their technical expertise and attention to detail were impressive.",
-    author: "Rajiv Mehta",
-    company: "Mehta Construction Ltd.",
+    author: "",
+    company: "Windsor Shelters",
     rating: 5,
   },
   {
     id: 2,
     content:
       "We've worked with The RockShield on multiple projects, and they consistently exceed our expectations with their quality and timely delivery.",
-    author: "Sunita Patel",
-    company: "Green Earth Developers",
+    author: "",
+    company: "Forest Villa",
     rating: 5,
   },
   {
     id: 3,
     content:
       "The team at The RockShield provided an excellent solution for our erosion control needs. Their engineering approach and quality of work are outstanding.",
-    author: "Vikram Singh",
-    company: "Highway Infrastructure Corp.",
+    author: "",
+    company: "Rakesh Electricals",
     rating: 5,
   },
   {
     id: 4,
     content:
       "Professional team that provided innovative solutions for our challenging terrain. Their knowledge of gabion structures is unmatched in the industry.",
-    author: "Amit Sharma",
-    company: "Eco Solutions Ltd.",
+    author: "",
+    company: "Narkhede Infra",
     rating: 5,
   },
 ]
@@ -220,10 +220,9 @@ export default function Team() {
                         
                         <div className="flex items-center justify-between mt-auto border-t border-gray-100 pt-6">
                           <div>
-                            <p className="font-bold text-gray-800 font-heading">{testimonial.author}</p>
-                            <div className="flex items-center text-gray-500 text-sm mt-1">
-                              <Building2 className="h-3 w-3 mr-1" />
-                              <span>{testimonial.company}</span>
+                            <div className="flex items-center text-gray-800 text-sm">
+                              <Building2 className="h-4 w-4 mr-2 text-emerald-600" />
+                              <span className="font-bold font-heading">{testimonial.company}</span>
                             </div>
                           </div>
                           <div className="h-10 w-10 bg-emerald-50 rounded-full flex items-center justify-center">

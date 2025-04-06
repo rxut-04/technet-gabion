@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef, useState } from "react"
+import { useRef, useState, useEffect } from "react"
 import Image from "next/image"
 import { motion, useInView } from "framer-motion"
 import { ArrowRight, ChevronLeft, ChevronRight, X } from "lucide-react"
@@ -20,6 +20,7 @@ interface ProjectSite {
   title: string;
   image: string;
   description: string;
+  allImages?: string[];
 }
 
 interface LocationData {
@@ -42,27 +43,15 @@ const projectData: LocationData[] = [
         sites: [
           {
             id: 1,
-            title: "Site 1",
+            title: "Decorative Gabion Wall Project",
             image: "/shirdi/IMG-20250331-WA0057.jpg",
-            description: "Decorative gabion wall installation in Shirdi."
-          },
-          {
-            id: 2,
-            title: "Site 2",
-            image: "/shirdi/IMG-20250331-WA0003.jpg",
-            description: "Decorative gabion wall project in Shirdi."
-          },
-          {
-            id: 3,
-            title: "Site 3",
-            image: "/shirdi/IMG-20250331-WA0061.jpg",
-            description: "Decorative gabion wall construction in Shirdi."
-          },
-          {
-            id: 4,
-            title: "Site 4",
-            image: "/shirdi/IMG-20250331-WA0062.jpg",
-            description: "Completed decorative gabion wall in Shirdi."
+            description: "Decorative gabion wall installation in Shirdi.",
+            allImages: [
+              "/shirdi/IMG-20250331-WA0057.jpg",
+              "/shirdi/IMG-20250331-WA0003.jpg",
+              "/shirdi/IMG-20250331-WA0061.jpg",
+              "/shirdi/IMG-20250331-WA0062.jpg"
+            ]
           }
         ]
       }
@@ -77,21 +66,14 @@ const projectData: LocationData[] = [
         sites: [
           {
             id: 1,
-            title: "Site 1",
+            title: "Slope Retaining Wall Project",
             image: "/pune/IMG-20250331-WA0046.jpg",
-            description: "Slope retaining wall in Pune."
-          },
-          {
-            id: 2,
-            title: "Site 2",
-            image: "/pune/IMG-20250331-WA0047.jpg",
-            description: "Slope retaining wall project in Pune."
-          },
-          {
-            id: 3,
-            title: "Site 3",
-            image: "/pune/IMG-20250331-WA0044.jpg",
-            description: "Slope retaining wall construction in Pune."
+            description: "Slope retaining wall project in Pune.",
+            allImages: [
+              "/pune/IMG-20250331-WA0046.jpg",
+              "/pune/IMG-20250331-WA0047.jpg",
+              "/pune/IMG-20250331-WA0044.jpg"
+            ]
           }
         ]
       }
@@ -101,74 +83,53 @@ const projectData: LocationData[] = [
     location: "KARJAT",
     sections: [
       {
-        title: "Gabion Wall",
+        title: "Site 1",
         description: "We successfully completed a gabion wall installation at Karjat, designed for effective erosion control and structural support. The wall features high-quality galvanized steel baskets filled with durable stones, offering both strength and a natural aesthetic. Completed on time and within budget, the project enhances the site's stability while blending seamlessly with the environment.",
         sites: [
           {
             id: 1,
-            title: "Site 1",
+            title: "Gabion Wall Project",
             image: "/karjat/gabionwall/IMG-20250127-WA0002.jpg",
-            description: "Gabion wall installation in Karjat."
-          },
-          {
-            id: 2,
-            title: "Site 2",
-            image: "/karjat/gabionwall/IMG-20250127-WA0005.jpg",
-            description: "Gabion wall project in Karjat."
-          },
-          {
-            id: 3,
-            title: "Site 3",
-            image: "/karjat/gabionwall/IMG-20250127-WA0008.jpg",
-            description: "Gabion wall construction in Karjat."
+            description: "Gabion wall installation at Karjat Site 1",
+            allImages: [
+              "/karjat/gabionwall/IMG-20250127-WA0002.jpg",
+              "/karjat/gabionwall/IMG-20250127-WA0005.jpg",
+              "/karjat/gabionwall/IMG-20250127-WA0008.jpg"
+            ]
           }
         ]
       },
       {
-        title: "Retaining Wall",
+        title: "Site 2",
         description: "We successfully completed a gabion wall installation at Karjat, designed for effective erosion control and structural support. The wall features high-quality galvanized steel baskets filled with durable stones, offering both strength and a natural aesthetic. Completed on time and within budget, the project enhances the site's stability while blending seamlessly with the environment.",
         sites: [
           {
             id: 1,
-            title: "Site 1",
+            title: "Retaining Wall Project",
             image: "/karjat/retainingwall/IMG-20250107-WA0043.jpg",
-            description: "Retaining wall installation in Karjat."
-          },
-          {
-            id: 2,
-            title: "Site 2",
-            image: "/karjat/retainingwall/IMG-20250107-WA0037.jpg",
-            description: "Retaining wall project in Karjat."
-          },
-          {
-            id: 3,
-            title: "Site 3",
-            image: "/karjat/retainingwall/IMG-20250107-WA0038.jpg",
-            description: "Retaining wall construction in Karjat."
+            description: "Retaining wall installation at Karjat Site 2",
+            allImages: [
+              "/karjat/retainingwall/IMG-20250107-WA0043.jpg",
+              "/karjat/retainingwall/IMG-20250107-WA0037.jpg",
+              "/karjat/retainingwall/IMG-20250107-WA0038.jpg"
+            ]
           }
         ]
       },
       {
-        title: "Road Retaining Wall",
+        title: "Site 3",
         description: "We successfully completed a road retaining wall installation at Karjat, aimed at reinforcing the roadside and preventing soil erosion and collapse. Constructed using heavy-duty gabion baskets filled with durable stones, the wall ensures long-term stability and safety for nearby infrastructure. The project was completed on time and within budget, blending structural strength with a natural appearance.",
         sites: [
           {
             id: 1,
-            title: "Site 1",
+            title: "Road Retaining Wall Project",
             image: "/karjat/roadretainingwall/IMG-20250331-WA0042.jpg",
-            description: "Road retaining wall installation in Karjat."
-          },
-          {
-            id: 2,
-            title: "Site 2",
-            image: "/karjat/roadretainingwall/IMG-20250331-WA0041.jpg",
-            description: "Road retaining wall project in Karjat."
-          },
-          {
-            id: 3,
-            title: "Site 3",
-            image: "/karjat/roadretainingwall/IMG-20250331-WA0040.jpg",
-            description: "Road retaining wall construction in Karjat."
+            description: "Road retaining wall installation at Karjat Site 3",
+            allImages: [
+              "/karjat/roadretainingwall/IMG-20250331-WA0042.jpg",
+              "/karjat/roadretainingwall/IMG-20250331-WA0041.jpg",
+              "/karjat/roadretainingwall/IMG-20250331-WA0040.jpg"
+            ]
           }
         ]
       }
@@ -183,21 +144,14 @@ const projectData: LocationData[] = [
         sites: [
           {
             id: 1,
-            title: "Site 1",
+            title: "River Bank Protection Project",
             image: "/igatpuri/riverbankprotection/IMG-20250331-WA0021.jpg",
-            description: "River bank protection in Igatpuri."
-          },
-          {
-            id: 2,
-            title: "Site 2",
-            image: "/igatpuri/riverbankprotection/IMG-20250331-WA0000.jpg",
-            description: "River bank protection project in Igatpuri."
-          },
-          {
-            id: 3,
-            title: "Site 3",
-            image: "/igatpuri/riverbankprotection/IMG-20250331-WA0004.jpg",
-            description: "River bank protection installation in Igatpuri."
+            description: "River bank protection installation in Igatpuri.",
+            allImages: [
+              "/igatpuri/riverbankprotection/IMG-20250331-WA0021.jpg",
+              "/igatpuri/riverbankprotection/IMG-20250331-WA0000.jpg",
+              "/igatpuri/riverbankprotection/IMG-20250331-WA0004.jpg"
+            ]
           }
         ]
       }
@@ -213,10 +167,42 @@ export default function Projects() {
   const [activeSectionIndex, setActiveSectionIndex] = useState<number>(0)
   const [hoveredCard, setHoveredCard] = useState<number | null>(null)
   const [isFlipping, setIsFlipping] = useState(false)
+  const [currentImageIndex, setCurrentImageIndex] = useState<number>(0)
+  const autoSlideIntervalRef = useRef<NodeJS.Timeout | null>(null)
 
   // Find the current location data
   const currentLocation = projectData.find(location => location.location === activeLocation);
   const currentSection = currentLocation ? currentLocation.sections[activeSectionIndex] : null;
+  
+  // Auto rotate images
+  useEffect(() => {
+    // Clear any existing interval
+    if (autoSlideIntervalRef.current) {
+      clearInterval(autoSlideIntervalRef.current);
+    }
+    
+    // Only start auto-rotation if we're not viewing details
+    if (!activeProjectId && currentSection?.sites[0]?.allImages?.length > 1) {
+      autoSlideIntervalRef.current = setInterval(() => {
+        setCurrentImageIndex(prevIndex => {
+          const imageArray = currentSection.sites[0].allImages || [];
+          return (prevIndex + 1) % imageArray.length;
+        });
+      }, 3000); // Change image every 3 seconds
+    }
+    
+    // Cleanup interval on component unmount or when dependencies change
+    return () => {
+      if (autoSlideIntervalRef.current) {
+        clearInterval(autoSlideIntervalRef.current);
+      }
+    };
+  }, [activeLocation, activeSectionIndex, activeProjectId, currentSection]);
+
+  // Reset image index when changing locations or sections
+  useEffect(() => {
+    setCurrentImageIndex(0);
+  }, [activeLocation, activeSectionIndex]);
 
   const handleViewDetails = (id: number, e: React.MouseEvent) => {
     e.stopPropagation(); // Prevent any other interactions
@@ -286,6 +272,36 @@ export default function Projects() {
     setActiveProjectId(null);
   }
 
+  const nextImage = (e: React.MouseEvent, images: string[]) => {
+    e.stopPropagation();
+    
+    // Reset the auto-rotation timer when manually changing images
+    if (autoSlideIntervalRef.current) {
+      clearInterval(autoSlideIntervalRef.current);
+      
+      autoSlideIntervalRef.current = setInterval(() => {
+        setCurrentImageIndex(prevIndex => (prevIndex + 1) % images.length);
+      }, 3000);
+    }
+    
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const prevImage = (e: React.MouseEvent, images: string[]) => {
+    e.stopPropagation();
+    
+    // Reset the auto-rotation timer when manually changing images
+    if (autoSlideIntervalRef.current) {
+      clearInterval(autoSlideIntervalRef.current);
+      
+      autoSlideIntervalRef.current = setInterval(() => {
+        setCurrentImageIndex(prevIndex => (prevIndex + 1) % images.length);
+      }, 3000);
+    }
+    
+    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
+
   return (
     <section id="projects" className="py-24 bg-white">
       <div className="container mx-auto px-4">
@@ -343,7 +359,15 @@ export default function Projects() {
                 {/* Section Title and Description */}
                 {currentSection && (
                   <div className="text-center mb-10">
-                    <h3 className="text-2xl font-bold mb-4 text-emerald-800">{currentSection.title}</h3>
+                    <h3 className="text-2xl font-bold mb-4 text-emerald-800">
+                      {location.location === "KARJAT" 
+                        ? activeSectionIndex === 0 
+                          ? "Gabion Wall Project" 
+                          : activeSectionIndex === 1 
+                            ? "Retaining Wall Project" 
+                            : "Road Retaining Wall Project"
+                        : currentSection.title}
+                    </h3>
                   </div>
                 )}
 
@@ -381,13 +405,50 @@ export default function Projects() {
                                   className="bg-[#F9F9F9] rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 h-full"
                                 >
                                   <div className="relative h-64 w-full">
-                                    <Image 
-                                      src={site.image} 
-                                      alt={site.title} 
-                                      fill 
-                                      className="object-cover transition-transform duration-500 hover:scale-105"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                                    {site.allImages ? (
+                                      <>
+                                        <Image 
+                                          src={site.allImages[currentImageIndex]} 
+                                          alt={site.title} 
+                                          fill 
+                                          className="object-cover transition-transform duration-500"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                                        
+                                        {/* Image navigation arrows */}
+                                        {site.allImages.length > 1 && (
+                                          <>
+                                            <button 
+                                              onClick={(e) => prevImage(e, site.allImages)}
+                                              className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-1 shadow-md z-10"
+                                            >
+                                              <ChevronLeft className="h-5 w-5 text-gray-700" />
+                                            </button>
+                                            <button 
+                                              onClick={(e) => nextImage(e, site.allImages)}
+                                              className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-1 shadow-md z-10"
+                                            >
+                                              <ChevronRight className="h-5 w-5 text-gray-700" />
+                                            </button>
+                                            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
+                                              {site.allImages.map((_, idx) => (
+                                                <div key={idx} className={`h-1.5 w-1.5 rounded-full ${idx === currentImageIndex ? 'bg-white' : 'bg-white/50'}`}></div>
+                                              ))}
+                                            </div>
+                                          </>
+                                        )}
+                                      </>
+                                    ) : (
+                                      <>
+                                        <Image 
+                                          src={site.image} 
+                                          alt={site.title} 
+                                          fill 
+                                          className="object-cover transition-transform duration-500 hover:scale-105"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                                      </>
+                                    )}
                                   </div>
                                   <div className="p-8">
                                     <div className="flex items-start mb-4">

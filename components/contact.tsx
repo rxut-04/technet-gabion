@@ -91,13 +91,13 @@ export default function Contact() {
                       <label htmlFor="name" className="text-sm font-medium">
                         Full Name
                       </label>
-                      <Input id="name" placeholder="John Doe" required className="w-full" ref={nameRef} />
+                      <Input id="name" placeholder="Your name" required className="w-full" ref={nameRef} />
                     </div>
                     <div className="space-y-2">
                       <label htmlFor="email" className="text-sm font-medium">
                         Email Address
                       </label>
-                      <Input id="email" type="email" placeholder="john@example.com" required className="w-full" ref={emailRef} />
+                      <Input id="email" type="email" placeholder="xyz@gmail.com" required className="w-full" ref={emailRef} />
                     </div>
                   </div>
                   <div className="space-y-2">
@@ -125,7 +125,7 @@ export default function Contact() {
                         Preparing WhatsApp Message...
                       </>
                     ) : (
-                      "Send via WhatsApp"
+                      "Get Quote"
                     )}
                   </Button>
                 </form>
@@ -140,16 +140,16 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="bg-emerald-600 text-white rounded-lg shadow-md p-8 h-full">
-              <h3 className="text-2xl font-bold mb-6 font-heading text-center">Get In Touch</h3>
-              <div className="flex items-center justify-center mb-6">
-                <Phone className="h-8 w-8 mr-4" />
-                <h4 className="text-xl font-bold">Phone Numbers</h4>
+            <div className="bg-emerald-600 text-white rounded-lg shadow-md p-6 h-full max-w-sm">
+              <h3 className="text-xl font-bold mb-4 font-heading">Get In Touch</h3>
+              <div className="flex items-center mb-3">
+                <Phone className="h-6 w-6 mr-3" />
+                <h4 className="text-lg font-bold">Phone Numbers</h4>
               </div>
-              <div className="space-y-4 text-center">
-                <p className="text-emerald-50 text-lg">+91 9767913446</p>
-                <p className="text-emerald-50 text-lg">+91 9922941668</p>
-                <p className="text-emerald-50 text-lg">+91 9923018090</p>
+              <div className="space-y-2 text-left">
+                <p className="text-emerald-50">+91 9767913446</p>
+                <p className="text-emerald-50">+91 9922941668</p>
+                <p className="text-emerald-50">+91 9923018090</p>
               </div>
             </div>
           </motion.div>
