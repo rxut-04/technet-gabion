@@ -143,7 +143,7 @@ export default function Team() {
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto mt-6 text-lg">
             Meet our team of experienced professionals dedicated to providing the highest quality gabion solutions and
-            civil services.
+            construction services.
           </p>
         </div>
 
