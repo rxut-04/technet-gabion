@@ -1,13 +1,11 @@
 "use client"
 
-import type React from "react"
-
 import { useState, useRef } from "react"
 import { motion } from "framer-motion"
+import { Phone, Loader2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { MapPin, Phone, Mail, Clock, Loader2 } from "lucide-react"
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -35,7 +33,7 @@ export default function Contact() {
 *Message:* ${message}`
 
     // Create WhatsApp URL with formatted message
-    const whatsappNumber = "917020706900" // Format: country code + number without +
+    const whatsappNumber = "919767913446" // Format: country code + number without +
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`
 
     // Simulate brief loading before redirect
@@ -135,48 +133,23 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* Contact Information */}
+          {/* Phone Numbers */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="flex flex-col justify-between"
           >
             <div className="bg-emerald-600 text-white rounded-lg shadow-md p-8 h-full">
-              <h3 className="text-2xl font-bold mb-6 font-heading">Get In Touch</h3>
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <MapPin className="h-6 w-6 mr-4 mt-1 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-medium mb-1">Our Location</h4>
-                    <p className="text-emerald-100">123 Business Park, Mumbai, Maharashtra, India - 400001</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <Phone className="h-6 w-6 mr-4 mt-1 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-medium mb-1">Phone Number</h4>
-                    <p className="text-emerald-100">+91 7020706900 (WhatsApp)</p>
-                    <p className="text-emerald-100">+91 98765 43211</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <Mail className="h-6 w-6 mr-4 mt-1 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-medium mb-1">Email Address</h4>
-                    <p className="text-emerald-100">info@technetgabion.com</p>
-                    <p className="text-emerald-100">sales@technetgabion.com</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <Clock className="h-6 w-6 mr-4 mt-1 flex-shrink-0" />
-                  <div>
-                    <h4 className="font-medium mb-1">Working Hours</h4>
-                    <p className="text-emerald-100">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                    <p className="text-emerald-100">Saturday: 9:00 AM - 1:00 PM</p>
-                  </div>
-                </div>
+              <h3 className="text-2xl font-bold mb-6 font-heading text-center">Get In Touch</h3>
+              <div className="flex items-center justify-center mb-6">
+                <Phone className="h-8 w-8 mr-4" />
+                <h4 className="text-xl font-bold">Phone Numbers</h4>
+              </div>
+              <div className="space-y-4 text-center">
+                <p className="text-emerald-50 text-lg">+91 9767913446</p>
+                <p className="text-emerald-50 text-lg">+91 9922941668</p>
+                <p className="text-emerald-50 text-lg">+91 9923018090</p>
               </div>
             </div>
           </motion.div>

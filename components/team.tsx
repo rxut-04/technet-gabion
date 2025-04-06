@@ -16,32 +16,25 @@ import {
 const team = [
   {
     id: 1,
-    name: "Sachin Shivajirao Bhamare",
-    role: "Founder",
-    image: "/placeholder.svg?height=400&width=400",
-    experience: "25+ years of technical expertise in gabion installations",
+    name: "Madhukar Shermale",
+    role: "Proprietor",
+    image: "/experts/expert1.jpg",
+    experience: "10+ years of expertise in construction industry",
   },
   {
     id: 2,
-    name: "Dr. Rajesh Kumar",
-    role: "Geoengineering Expert",
-    image: "/placeholder.svg?height=400&width=400",
-    experience: "PhD from IIT Mumbai with specialization in soil mechanics",
-  },
-  {
-    id: 3,
-    name: "Priya Sharma",
-    role: "Structural Engineer",
-    image: "/placeholder.svg?height=400&width=400",
-    experience: "15 years of experience in structural design and stability analysis",
-  },
+    name: "Rohidas Khairnar",
+    role: "Proprietor",
+    image: "/experts/expert2.jpg",
+    experience: "10+ years of expertise in gabion installation",
+  }
 ]
 
 const testimonials = [
   {
     id: 1,
     content:
-      "TechNet Gabion delivered exceptional quality on our hillside protection project. Their technical expertise and attention to detail were impressive.",
+      "The RockShield delivered exceptional quality on our hillside protection project. Their technical expertise and attention to detail were impressive.",
     author: "Rajiv Mehta",
     company: "Mehta Construction Ltd.",
     rating: 5,
@@ -49,7 +42,7 @@ const testimonials = [
   {
     id: 2,
     content:
-      "We've worked with TechNet Gabion on multiple projects, and they consistently exceed our expectations with their quality and timely delivery.",
+      "We've worked with The RockShield on multiple projects, and they consistently exceed our expectations with their quality and timely delivery.",
     author: "Sunita Patel",
     company: "Green Earth Developers",
     rating: 5,
@@ -57,7 +50,7 @@ const testimonials = [
   {
     id: 3,
     content:
-      "The team at TechNet Gabion provided an excellent solution for our erosion control needs. Their engineering approach and quality of work are outstanding.",
+      "The team at The RockShield provided an excellent solution for our erosion control needs. Their engineering approach and quality of work are outstanding.",
     author: "Vikram Singh",
     company: "Highway Infrastructure Corp.",
     rating: 5,
@@ -159,13 +152,13 @@ export default function Team() {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20 max-w-4xl mx-auto"
         >
           {team.map((member) => (
             <motion.div key={member.id} variants={itemVariants}>
               <div className="bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl">
                 <div className="relative h-80 w-full">
-                  <Image src={member.image || "/placeholder.svg"} alt={member.name} fill className="object-cover" />
+                  <Image src={member.image} alt={member.name} fill className="object-cover" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-1">{member.name}</h3>

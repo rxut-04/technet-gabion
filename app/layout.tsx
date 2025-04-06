@@ -18,9 +18,9 @@ const workSans = Work_Sans({
 })
 
 export const metadata = {
-  title: "TechNet Gabion - Your Reliable Gabion, Rock Fall Protection & Painting Partner",
+  title: "The RockShield - Your Reliable Gabion, Rock Fall Protection & Painting Partner",
   description:
-    "TechNet Gabion provides quality gabion installations, rock fall protection systems, and painting services with a focus on technical excellence and engineering innovation.",
+    "The RockShield provides quality gabion installations, rock fall protection systems, and painting services with a focus on technical excellence and engineering innovation.",
     generator: 'v0.dev'
 }
 

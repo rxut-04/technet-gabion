@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Menu, X, Phone } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { cn } from "@/lib/utils"
 
@@ -40,7 +40,7 @@ export default function Header() {
           <Link href="/" className="flex items-center space-x-3">
             <div className="relative h-14 w-14">
               <Image 
-                src="/images/rockshieldmain.png" 
+                src="/images/logofinal.png" 
                 alt="RockShield Logo" 
                 fill 
                 className="object-contain"
@@ -63,10 +63,6 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
-            <div className="flex items-center ml-6 text-emerald-600 font-semibold">
-              <Phone className="w-4 h-4 mr-2" />
-              <span>+91 98765 43210</span>
-            </div>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -97,10 +93,6 @@ export default function Header() {
                   {item.name}
                 </Link>
               ))}
-              <div className="flex items-center py-2 text-emerald-600 font-semibold">
-                <Phone className="w-4 h-4 mr-2" />
-                <span>+91 98765 43210</span>
-              </div>
             </div>
           </motion.div>
         )}

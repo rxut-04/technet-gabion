@@ -19,53 +19,29 @@ const serviceIcons = {
   1: <Layers className="h-7 w-7 text-emerald-600" />,
   2: <Waves className="h-7 w-7 text-emerald-600" />,
   3: <Shield className="h-7 w-7 text-emerald-600" />,
-  4: <PaintBucket className="h-7 w-7 text-emerald-600" />,
-  5: <Mountain className="h-7 w-7 text-emerald-600" />,
-  6: <Shield className="h-7 w-7 text-emerald-600" />,
 }
 
 const services = [
   {
     id: 1,
-    image: "/images/service1.webp",
-    title: "Gabian Retaining Wall",
+    image: "/images/service1.png",
+    title: "Gabion Retaining Wall",
     description:
       "Turn-Key Gabion Retaining Wall solutions from Need Based Geological Survey to Technical Installation/Commissioning of Reliable Gabion Retaining Walls and Structures using Mechanically Woven Double Twist Hexagonal Opening (60x80,80x100 and 100x120mm) Gabions made out of Zn+PVC Coated wires of Dia 3.7mm(2.7mm+1mm PVC) for Box, Selvage 4.4mm(Dia 3.4mm+1mm PVC) & Lacing 3.2mm (2.2mm+1mm PVC) with combination of various size gabion boxes",
   },
   {
     id: 2,
-    image: "/images/service2.webp",
-    title: "River Bank Protection Gabian",
+    image: "/images/service2.png",
+    title: "River Bank Protection Gabion",
     description:
       "Turn-Key Gabion Retaining Wall solutions for river bank erosion control from Need Based Geological Survey to Technical Installation/Commissioning of Reliable Gabion Retaining Walls and Structures using Gabion Mattresses and Gabion Boxes manufactured by Mechanically Woven Double Twist Hexagonal Opening (60x80,80x100 and 100x120mm) Gabions made out of Zn+PVC Coated wires of Dia 3.7mm(2.7mm+1mm PVC) for Box, Selvage 4.4mm(Dia 3.4mm+1mm PVC) & Lacing 3.2mm (2.2mm+1mm PVC) with combination of various size gabion boxes.",
   },
   {
     id: 3,
-    image: "/images/service3.webp",
-    title: "Decorative Weld Mesh Gabian Fencing",
+    image: "/images/service3.png",
+    title: "Decorative Weld Mesh Gabion Fencing",
     description:
       "Decorative Gabion Fencing using Weld Mesh Gabion Boxes of different wire dmiameters, square openings and box sizes made out of Zn Coated wires",
-  },
-  {
-    id: 4,
-    image: "/images/service4.webp",
-    title: "Internal & External Painting",
-    description:
-      "Turn-key painting projects of Internal and External Painting for new and repainting work for residential, commercial, industrial and infra projects. Working with applicators Asian Paints, Berger Paints, Jotun Paints, Nerolac Paints etc.",
-  },
-  {
-    id: 5,
-    image: "/images/service5.webp",
-    title: "Rock Anchored Gabian Retaining Wall",
-    description:
-      "Turn-Key Rock Anchored Gabion Retaining Wall solutions from Need Based Geological Survey to Technical Installation/Commissioning of Rock Anchors of different diameter e.g.16mm,20mm,25mm etc, along with Reliable Gabion Retaining Walls and Structures using Mechanically Woven Double Twist Hexagonal Opening (60x80,80x100 and 100x120mm) Gabions made out of Zn+PVC Coated wires of Dia 3.7mm(2.7mm+1mm PVC) for Box, Selvage 4.4mm(Dia 3.4mm+1mm PVC) & Lacing 3.2mm (2.2mm+1mm PVC) with combination of various size gabion boxes.",
-  },
-  {
-    id: 6,
-    image: "/images/service6.webp",
-    title: "Rock Fall Protection",
-    description:
-      "Rock Fall Protection using Mechanically Woven Double Twist Gabion Mesh, Wire Ropes, Flexible Wire Rope Nets, Geotextile using rock anchors as defined intervals as per drawing.",
   },
 ]
 
@@ -313,4 +289,3 @@ export default function Services() {
     </section>
   )
 }
-

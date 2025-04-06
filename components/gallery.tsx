@@ -5,77 +5,93 @@ import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronLeft, ChevronRight, Maximize2, X } from "lucide-react"
 
-// Create a comprehensive list of all image files in the public/images directory
+// Updated list with the 17 gallery images from the public/gallery directory
 const photos = [
-  // Original photo1-56.webp series
-  ...Array.from({ length: 56 }, (_, i) => ({
-    id: `photo${i + 1}`,
-    src: `/images/photo${i + 1}.webp`,
-    alt: `Gallery image ${i + 1}`,
-  })),
-  
-  // WhatsApp Image files
   {
-    id: "whatsapp-image-1",
-    src: "/images/WhatsApp Image 2025-04-03 at 21.13.10_ce00cc1d.jpg",
-    alt: "WhatsApp Image 1",
+    id: "img-1",
+    src: "/gallery/IMG-20250331-WA0006.jpg",
+    alt: "Gallery image 1",
   },
   {
-    id: "whatsapp-image-2",
-    src: "/images/WhatsApp Image 2025-04-03 at 21.11.44_543ec326.jpg",
-    alt: "WhatsApp Image 2",
+    id: "img-2",
+    src: "/gallery/IMG-20250331-WA0066.jpg",
+    alt: "Gallery image 2",
   },
   {
-    id: "whatsapp-image-3",
-    src: "/images/WhatsApp Image 2025-04-03 at 21.11.41_26a3b771.jpg",
-    alt: "WhatsApp Image 3",
+    id: "img-3",
+    src: "/gallery/IMG-20250331-WA0042.jpg",
+    alt: "Gallery image 3",
   },
   {
-    id: "whatsapp-image-4",
-    src: "/images/WhatsApp Image 2025-04-03 at 21.11.39_142c6859.jpg",
-    alt: "WhatsApp Image 4",
+    id: "img-4",
+    src: "/gallery/IMG-20250331-WA0064.jpg",
+    alt: "Gallery image 4",
   },
   {
-    id: "whatsapp-image-5",
-    src: "/images/WhatsApp Image 2025-04-03 at 21.11.37_8bb508e9.jpg",
-    alt: "WhatsApp Image 5",
+    id: "img-5",
+    src: "/gallery/IMG-20250331-WA0031.jpg",
+    alt: "Gallery image 5",
   },
   {
-    id: "whatsapp-image-6",
-    src: "/images/WhatsApp Image 2025-04-03 at 21.11.36_815a4fb0.jpg",
-    alt: "WhatsApp Image 6",
+    id: "img-6",
+    src: "/gallery/IMG-20250331-WA0008.jpg",
+    alt: "Gallery image 6",
   },
   {
-    id: "whatsapp-image-7",
-    src: "/images/WhatsApp Image 2025-04-03 at 21.11.36_42bad114.jpg",
-    alt: "WhatsApp Image 7",
+    id: "img-7",
+    src: "/gallery/IMG-20250331-WA0035.jpg",
+    alt: "Gallery image 7",
   },
   {
-    id: "whatsapp-image-8",
-    src: "/images/WhatsApp Image 2025-04-03 at 21.11.35_fe0924cd.jpg",
-    alt: "WhatsApp Image 8",
+    id: "img-8",
+    src: "/gallery/IMG-20250117-WA0010.jpg",
+    alt: "Gallery image 8",
   },
   {
-    id: "whatsapp-image-9",
-    src: "/images/WhatsApp Image 2025-04-03 at 21.11.33_998ec3cb.jpg",
-    alt: "WhatsApp Image 9",
+    id: "img-9",
+    src: "/gallery/IMG-20250331-WA0056.jpg",
+    alt: "Gallery image 9",
   },
   {
-    id: "whatsapp-image-10",
-    src: "/images/WhatsApp Image 2025-04-03 at 21.11.32_b6a90a7b.jpg",
-    alt: "WhatsApp Image 10",
+    id: "img-10",
+    src: "/gallery/IMG-20250331-WA0045.jpg",
+    alt: "Gallery image 10",
   },
-  
-  // Additional IMG-* files (WA0026 to WA0119)
-  ...Array.from({ length: 94 }, (_, i) => {
-    const num = i + 26; // Starting from WA0026
-    const paddedNum = num.toString().padStart(4, '0');
-    return {
-      id: `img-wa-${num}`,
-      src: `/images/IMG-20250403-WA${paddedNum}.jpg`,
-      alt: `Project image ${num}`,
-    };
-  })
+  {
+    id: "img-11",
+    src: "/gallery/IMG-20250331-WA0030.jpg",
+    alt: "Gallery image 11",
+  },
+  {
+    id: "img-12",
+    src: "/gallery/IMG-20250331-WA0028.jpg",
+    alt: "Gallery image 12",
+  },
+  {
+    id: "img-13",
+    src: "/gallery/IMG-20250331-WA0061.jpg",
+    alt: "Gallery image 13",
+  },
+  {
+    id: "img-14",
+    src: "/gallery/IMG-20250331-WA0003.jpg",
+    alt: "Gallery image 14",
+  },
+  {
+    id: "img-15",
+    src: "/gallery/IMG-20250331-WA0050.jpg",
+    alt: "Gallery image 15",
+  },
+  {
+    id: "img-16",
+    src: "/gallery/IMG-20250331-WA0016.jpg",
+    alt: "Gallery image 16",
+  },
+  {
+    id: "img-17",
+    src: "/gallery/IMG-20250331-WA0077.jpg",
+    alt: "Gallery image 17",
+  },
 ];
 
 export default function Gallery() {
