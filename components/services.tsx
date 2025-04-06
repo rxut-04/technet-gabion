@@ -24,14 +24,14 @@ const serviceIcons = {
 const services = [
   {
     id: 1,
-    image: "/images/service1.png",
+    image: "/images/service2.png",
     title: "Gabion Retaining Wall",
     description:
       "Turn-Key Gabion Retaining Wall solutions from Need Based Geological Survey to Technical Installation/Commissioning of Reliable Gabion Retaining Walls and Structures using Mechanically Woven Double Twist Hexagonal Opening (60x80,80x100 and 100x120mm) Gabions made out of Zn+PVC Coated wires of Dia 3.7mm(2.7mm+1mm PVC) for Box, Selvage 4.4mm(Dia 3.4mm+1mm PVC) & Lacing 3.2mm (2.2mm+1mm PVC) with combination of various size gabion boxes",
   },
   {
     id: 2,
-    image: "/images/service2.png",
+    image: "/images/service1.png",
     title: "River Bank Protection Gabion",
     description:
       "Turn-Key Gabion Retaining Wall solutions for river bank erosion control from Need Based Geological Survey to Technical Installation/Commissioning of Reliable Gabion Retaining Walls and Structures using Gabion Mattresses and Gabion Boxes manufactured by Mechanically Woven Double Twist Hexagonal Opening (60x80,80x100 and 100x120mm) Gabions made out of Zn+PVC Coated wires of Dia 3.7mm(2.7mm+1mm PVC) for Box, Selvage 4.4mm(Dia 3.4mm+1mm PVC) & Lacing 3.2mm (2.2mm+1mm PVC) with combination of various size gabion boxes.",

@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <h3 className="text-xl font-bold mb-4">The RockShield</h3>
-            <p className="text-gray-400 mb-4">Your Reliable Gabion, Rock Fall Protection & Painting Partner.</p>
+            <p className="text-gray-400 mb-4">Building Stronger Structures, Securing Landscapes.</p>
             <div className="flex space-x-4">
               <Link href="https://www.facebook.com/profile.php?id=61574480562946&mibextid=ZbWKwL" className="text-gray-400 hover:text-white transition-colors">
                 <Facebook size={20} />

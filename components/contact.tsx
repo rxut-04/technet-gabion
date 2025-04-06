@@ -33,7 +33,7 @@ export default function Contact() {
 *Message:* ${message}`
 
     // Create WhatsApp URL with formatted message
-    const whatsappNumber = "919767913446" // Format: country code + number without +
+    const whatsappNumber = "917821867350" // Format: country code + number without +
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`
 
     // Simulate brief loading before redirect
@@ -147,6 +147,7 @@ export default function Contact() {
                 <h4 className="text-lg font-bold">Phone Numbers</h4>
               </div>
               <div className="space-y-2 text-left">
+                <p className="text-emerald-50">+91 7821867350</p>
                 <p className="text-emerald-50">+91 9767913446</p>
                 <p className="text-emerald-50">+91 9922941668</p>
                 <p className="text-emerald-50">+91 9923018090</p>
