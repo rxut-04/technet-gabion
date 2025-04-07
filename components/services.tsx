@@ -195,7 +195,7 @@ export default function Services() {
                               <h3 className="text-xl font-bold text-emerald-800 font-heading">{service.title}</h3>
                             </div>
                           </div>
-                          <div className="overflow-y-auto pr-3 custom-scrollbar h-[300px] text-left">
+                          <div className="overflow-y-auto pr-3 custom-scrollbar h-[300px] text-left service-content">
                             <p className="text-gray-700 leading-relaxed">{service.description}</p>
                           </div>
                           <div className="mt-6 text-right">
@@ -261,11 +261,20 @@ export default function Services() {
         .card-back {
           transform: rotateY(180deg);
           z-index: 0;
+          overflow: hidden;
         }
         
         /* Remove the counter-rotation that's causing the reversed text */
         .card-back * {
           transform: none; 
+        }
+        
+        /* Ensure scroll container properly handles touch events */
+        .service-content {
+          -webkit-overflow-scrolling: touch;
+          touch-action: pan-y;
+          transform: translateZ(0);
+          will-change: scroll-position;
         }
         
         .custom-scrollbar::-webkit-scrollbar {
