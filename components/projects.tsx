@@ -470,16 +470,16 @@ export default function Projects() {
                               
                               {/* Back Card (Details) */}
                               <div className="card-face card-back">
-                                <div className="bg-emerald-50 rounded-xl overflow-hidden shadow-lg h-full p-8 border border-emerald-100">
-                                  <div className="flex items-center justify-between mb-6">
+                                <div className="bg-emerald-50 rounded-xl shadow-lg h-full border border-emerald-100 flex flex-col">
+                                  <div className="flex items-center justify-between p-6 border-b border-emerald-100">
                                     <div className="flex items-center space-x-3">
                                       <h3 className="text-xl font-bold text-emerald-800 font-heading">{currentSection?.title} - {site.title}</h3>
                                     </div>
                                   </div>
-                                  <div className="overflow-y-auto pr-3 custom-scrollbar h-[300px] text-left">
+                                  <div className="p-6 flex-1 overflow-y-auto scroll-smooth scrollbar-thin scrollbar-thumb-emerald-500 scrollbar-track-emerald-50">
                                     <p className="text-gray-700 leading-relaxed">{currentSection?.description}</p>
                                   </div>
-                                  <div className="mt-6 text-right">
+                                  <div className="p-4 border-t border-emerald-100 text-right">
                                     <button 
                                       onClick={handleBackToProject}
                                       className="border border-emerald-500 text-emerald-600 hover:bg-emerald-50 transition-all duration-300 py-2 px-4 rounded-md"
@@ -543,6 +543,7 @@ export default function Projects() {
         .card-back {
           transform: rotateY(180deg);
           z-index: 0;
+          overflow: hidden;
         }
         
         /* Remove the counter-rotation that's causing the reversed text */
@@ -550,22 +551,34 @@ export default function Projects() {
           transform: none; 
         }
         
-        .custom-scrollbar::-webkit-scrollbar {
+        /* Scrollbar styling */
+        .scrollbar-thin::-webkit-scrollbar {
           width: 6px;
         }
         
-        .custom-scrollbar::-webkit-scrollbar-track {
-          background: #e5e7eb;
-          border-radius: 10px;
-        }
-        
-        .custom-scrollbar::-webkit-scrollbar-thumb {
+        .scrollbar-thumb-emerald-500::-webkit-scrollbar-thumb {
           background: #10b981;
           border-radius: 10px;
         }
         
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-          background: #059669;
+        .scrollbar-track-emerald-50::-webkit-scrollbar-track {
+          background: #e5e7eb;
+          border-radius: 10px;
+        }
+        
+        /* For Firefox */
+        .scrollbar-thin {
+          scrollbar-width: thin;
+          scrollbar-color: #10b981 #e5e7eb;
+        }
+        
+        /* For touch devices */
+        @media (pointer: coarse) {
+          .scroll-smooth {
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+            overscroll-behavior: contain;
+          }
         }
       `}</style>
     </section>
